@@ -1,0 +1,15 @@
+//color palette
+$white: #ffffff;
+$gray: #666666;
+$blue: #2abfd4;
+$dark-blue: #3a83b6;
+
+//Fonts
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700|Raleway:300,400,700');
+
+h1, h2, h3, h4{
+  font-family: 'Raleway', sans-serif;
+}
+p, a, span{
+  font-family: 'Lato', sans-serif;
+}
