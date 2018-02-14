@@ -1,0 +1,1 @@
+"use strict";$(".counter").counterUp({delay:10,time:1e3}),$(window).scroll(function(){window.pageYOffset>200?$("header").addClass("blue"):$("header").removeClass("blue")});
