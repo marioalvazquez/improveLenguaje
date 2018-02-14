@@ -190,7 +190,11 @@ header .row {
   padding-top: 5rem;
   padding-bottom: 5rem; }
   #freeDemo .form-control {
-    width: 100% !important; }
+    width: 100% !important;
+    background: none !important;
+    border: 2px solid #fff !important;
+    border-radius: 20px !important;
+    color: #fff !important; }
   #freeDemo input[type="submit"] {
     background: none;
     color: #ffffff;
