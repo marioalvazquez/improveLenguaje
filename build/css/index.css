@@ -23,6 +23,9 @@
 .dark-blue {
   background: #3a83b6; }
 
+.col-xs-6 {
+  width: 50% !important; }
+
 .container {
   padding-top: 5rem; }
 
@@ -136,12 +139,39 @@ header .row {
   .nav-logo h1 a {
     text-transform: uppercase;
     color: #ffffff; }
+  @media screen and (max-width: 992px) {
+    .nav-logo h1 {
+      font-size: 1rem; } }
 
 .nav-navigation ul {
   display: flex;
   justify-content: space-around; }
   .nav-navigation ul li a {
     color: #ffffff; }
+
+@media screen and (max-width: 768px) {
+  .nav-navigation, .nav-cta {
+    display: none; } }
+
+@media screen and (min-width: 768px) {
+  .nav-mobile a {
+    display: none; } }
+
+.mobile-menu {
+  position: fixed;
+  width: 0;
+  overflow-x: hidden;
+  height: 100vh;
+  z-index: 10;
+  top: 44px;
+  transition: .5s all ease-out; }
+  .mobile-menu ul li {
+    padding: 2rem .5rem;
+    transition: .3s all ease;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff; }
+    .mobile-menu ul li:hover {
+      background: #2abfd4; }
 
 .hero {
   position: absolute;
@@ -162,6 +192,9 @@ header .row {
     .hero .container h3 {
       font-size: 5rem;
       font-weight: bold; }
+      @media screen and (max-width: 768px) {
+        .hero .container h3 {
+          font-size: 2rem; } }
 
 .counter-row {
   display: flex;
@@ -252,9 +285,12 @@ header .row {
     border-radius: 20px !important;
     color: #fff !important; }
   #freeDemo input[type="submit"] {
-    background: none;
-    color: #ffffff;
-    width: 100% !important; }
+    background: #ffffff;
+    color: #2abfd4;
+    outline: none;
+    width: 100% !important;
+    letter-spacing: 3px;
+    font-weight: bold; }
 
 footer .line-break {
   height: 1px;

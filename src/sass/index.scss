@@ -4,6 +4,14 @@ $gray: #666666;
 $blue: #2abfd4;
 $dark-blue: #3a83b6;
 
+
+//BreakPoints
+$bp-xs : 320px;
+$bp-s : 768px;
+$bp-m: 992px;
+$bp-l: 1200px;
+
+
 .white-text{
   color: $white;
 }
@@ -27,6 +35,9 @@ $dark-blue: #3a83b6;
 }
 .dark-blue{
   background: $dark-blue;
+}
+.col-xs-6{
+  width: 50% !important;
 }
 .container{
   padding-top: 5rem;
@@ -152,6 +163,9 @@ header .row{
       text-transform: uppercase;
       color: $white;
     }
+    @media screen and (max-width: $bp-m) {
+      font-size: 1rem;
+    }
   }
 }
 .nav-navigation ul{
@@ -165,10 +179,40 @@ header .row{
 }
 .nav-cta{
   a{
-
   }
 }
-
+.nav-navigation, .nav-cta{
+  @media screen and (max-width: $bp-s) {
+    display: none;
+  }
+}
+.nav-mobile{
+  a{
+    @media screen and(min-width: $bp-s) {
+      display: none;
+    }
+  }
+}
+.mobile-menu {
+    position: fixed;
+    width: 0;
+    overflow-x: hidden;
+    height: 100vh;
+    z-index: 10;
+    top: 44px;
+    transition: .5s all ease-out;
+    ul{
+      li{
+        padding: 2rem .5rem;
+        transition: .3s all ease;
+        border-top: 1px solid $white;
+        border-bottom: 1px solid $white;
+        &:hover{
+          background: $blue;
+        }
+      }
+    }
+}
 //hero
 
 .hero{
@@ -191,6 +235,9 @@ header .row{
     h3{
       font-size: 5rem;
       font-weight: bold;
+      @media screen and (max-width: $bp-s) {
+        font-size: 2rem;
+      }
     }
     a{
 
@@ -315,9 +362,12 @@ header .row{
     color: #fff !important;
   }
   input[type="submit"]{
-    background: none;
-    color: $white;
+    background: $white;
+    color: $blue;
+    outline: none;
     width: 100% !important;
+    letter-spacing: 3px;
+    font-weight: bold;
   }
 }
 
