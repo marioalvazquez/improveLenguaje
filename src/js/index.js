@@ -48,10 +48,10 @@ $(document).ready(() =>{
         url: `register.php?${$('#clientForm').serialize()}`
       })
       .done(data =>{
-        alert(data);
+        console.log(data);
       })
       .fail(data=>{
-        alert(data);
+        console.log(data);
       })
       .always(data=>{
         $('.loading-img').hide();
