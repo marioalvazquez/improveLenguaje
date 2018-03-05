@@ -289,6 +289,8 @@ header .row {
     border: 2px solid #fff !important;
     border-radius: 20px !important;
     color: #fff !important; }
+  #freeDemo input::placeholder {
+    color: #ffffff; }
   #freeDemo input[type="submit"] {
     background: #ffffff;
     color: #2abfd4;
@@ -324,9 +326,9 @@ header .row {
   border: 1px solid #3a83b6;
   padding-left: .5rem; }
 
-#form form .form-footer {
+.form-footer {
   position: relative; }
-  #form form .form-footer .loading-img {
+  .form-footer .loading-img {
     position: absolute;
     left: 2rem;
     display: none; }

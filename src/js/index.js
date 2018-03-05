@@ -42,7 +42,7 @@ $(document).ready(() =>{
       ev.preventDefault();
       $('#clientForm').find('input[type="submit"]')
       .attr('disabled', true);
-      $('.loading-img').show();
+      $('#clientForm .loading-img').show();
       $.ajax({
         method: "POST",
         url: `register.php?${$('#clientForm').serialize()}`
@@ -60,7 +60,37 @@ $(document).ready(() =>{
         alert("Something went wrong, please try again later.");
       })
       .always(data=>{
-        $('.loading-img').hide();
+        $('#clientForm .loading-img').hide();
+        $('#contactForm').find('input[type="submit"]')
+        .attr('disabled', false);
+      });
+      return false;
+  });
+  $('#contactForm').submit(ev => {
+      ev.preventDefault();
+      $('#contactForm').find('input[type="submit"]')
+      .attr('disabled', true);
+      $('#contactForm .loading-img').show();
+      $.ajax({
+        method: "POST",
+        url: `register.php?${$('#clientForm').serialize()}`
+      })
+      .done(data =>{
+        if (data == 1) {
+          alert("We've received your data, thank you very much.");
+          $('#contactForm').trigger('reset');
+        }
+        else{
+          alert("Something went wrong, please try again later.");
+        }
+      })
+      .fail(data=>{
+        alert("Something went wrong, please try again later.");
+      })
+      .always(data=>{
+        $('#contactForm .loading-img').hide();
+        $('#contactForm').find('input[type="submit"]')
+        .attr('disabled', false);
       });
       return false;
   });

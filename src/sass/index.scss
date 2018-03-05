@@ -367,6 +367,9 @@ header .row{
     border-radius: 20px !important;
     color: #fff !important;
   }
+  input::placeholder{
+    color: $white;
+  }
   input[type="submit"]{
     background: $white;
     color: $blue;
@@ -412,14 +415,14 @@ header .row{
       border: 1px solid $dark-blue;
       padding-left: .5rem;
     }
-    .form-footer{
-      position: relative;
-      .loading-img{
-        position: absolute;
-        left: 2rem;
-        display: none;
-      }
-    }
+  }
+}
+.form-footer{
+  position: relative;
+  .loading-img{
+    position: absolute;
+    left: 2rem;
+    display: none;
   }
 }
 //Footer
