@@ -36,3 +36,26 @@ $('#toggleMenu').on('click', ev =>{
   }
 
 });
+
+$(document).ready(() =>{
+  $('#clientForm').submit(ev => {
+      ev.preventDefault();
+      $('#clientForm').find('input[type="submit"]')
+      .attr('disabled', true);
+      $('.loading-img').show();
+      $.ajax({
+        method: "POST",
+        url: `register.php?${$('#clientForm').serialize()}`
+      })
+      .done(data =>{
+        alert(data);
+      })
+      .fail(data=>{
+        alert(data);
+      })
+      .always(data=>{
+        $('.loading-img').hide();
+      });
+      return false;
+  });
+});

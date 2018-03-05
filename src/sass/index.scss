@@ -127,6 +127,12 @@ body{
   padding: 0;
   width: 100%;
 }
+input{
+  outline: none !important;
+  &[type="submit"]{
+    cursor: pointer;
+  }
+}
 .page-wrap{
   overflow: hidden;
   min-height: 100vh;
@@ -370,7 +376,52 @@ header .row{
     font-weight: bold;
   }
 }
+//form and PayPal
 
+#form{
+  .form-card {
+    padding: 3rem 3rem 1.5rem 3rem;
+    margin: 1rem;
+    border: 1px solid $blue;
+    border-radius: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    &:hover{
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+}
+  form{
+    input[type="text"], input[type="tel"], input[type="email"], textarea, input[type="submit"]{
+      width: 100%;
+      outline: none;
+    }
+    input[type="submit"]{
+      transition: .3s all ease-out;
+      &:hover, &:focus{
+        background: $blue !important;
+        color: $white !important;
+      }
+      &:focus{
+        .loading-img{
+          display: block;
+        }
+      }
+    }
+    .input-control{
+      border-radius: 20px;
+      border: 1px solid $dark-blue;
+      padding-left: .5rem;
+    }
+    .form-footer{
+      position: relative;
+      .loading-img{
+        position: absolute;
+        left: 2rem;
+        display: none;
+      }
+    }
+  }
+}
 //Footer
 footer{
   .line-break{
