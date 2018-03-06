@@ -33,6 +33,17 @@
         <li><a href="">Services</a></li>
       </ul>
     </div>
+    <div class="hero">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-8">
+            <h2>Learn new languages</h2>
+            <h3>No need <br> to leave home</h3>
+            <a href="" class="bttn">Get Started!</a>
+          </div>
+        </div>
+      </div>
+    </div>
     </div>
     <div class="content-wrap">
       <div class="container">
