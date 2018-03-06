@@ -73,7 +73,7 @@ $(document).ready(() =>{
       $('#contactForm .loading-img').show();
       $.ajax({
         method: "POST",
-        url: `register.php?${$('#clientForm').serialize()}`
+        url: `register.php?${$('#contactForm').serialize()}`
       })
       .done(data =>{
         if (data == 1) {
