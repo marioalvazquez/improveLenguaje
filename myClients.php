@@ -48,8 +48,8 @@
     <div class="content-wrap">
       <div class="container">
         <div class="row">
-          <div class="col-sm-12">
-            <table class="table table-stripped">
+          <div class="col-sm-12 table-responsive">
+            <table class="table table-hover table-bordered table-striped">
               <thead>
                 <tr>
                   <th>Name</th>
