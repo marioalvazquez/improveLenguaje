@@ -125,6 +125,12 @@ input {
   .bttn.bttn-blue {
     border-color: #2abfd4;
     color: #2abfd4; }
+    .bttn.bttn-blue:hover {
+      background: #2abfd4 !important;
+      color: #ffffff !important; }
+  .bttn:hover {
+    background: #ffffff;
+    color: #2abfd4 !important; }
 
 header {
   position: fixed;

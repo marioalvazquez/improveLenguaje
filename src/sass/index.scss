@@ -145,6 +145,14 @@ input{
   &.bttn-blue{
     border-color: $blue;
     color: $blue;
+    &:hover{
+      background: $blue !important;
+      color: $white !important;
+    }
+  }
+  &:hover{
+    background: $white;
+    color: $blue !important;
   }
 }
 //Header

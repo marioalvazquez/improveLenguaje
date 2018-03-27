@@ -11,6 +11,16 @@ $(window).scroll(() =>{
     $('header').removeClass('blue')
   }
 });
+$('.mobile-menu-link').on('click', ev=> {
+  var $iconMenu = $('#toggleMenu').find('span');
+  $iconMenu.addClass('icon-menu');
+  $('.mobile-menu').css({
+    "width": "0%"
+  });
+  $('body').css({
+    "overflow-y": "initial"
+  });
+});
 $('#toggleMenu').on('click', ev =>{
   ev.preventDefault();
   var $iconMenu = $('#toggleMenu').find('span');
